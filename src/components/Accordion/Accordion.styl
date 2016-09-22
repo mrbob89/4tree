@@ -1,0 +1,30 @@
+.accordion {
+  list-style: none;
+}
+
+.title {
+  color: green;
+  font-weight: bold;
+  cursor: pointer;
+  &:before {
+    content: '▸';
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align top;
+  }
+}
+
+.titleOpened {
+  composes: title;
+  &:before {
+    transform: rotate(90deg);
+  }
+}
+
+.content {
+  display none;
+}
+
+.contentOpened {
+  display block;
+}
